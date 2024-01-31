@@ -18,7 +18,7 @@ def det(request,movie_id):
     return render(request,'det.html',{'movie':movie})
 
 
-def update(request,id):
+def update(request):
     movie=Movie.objects.get(id=id)
     form=Movieform(request.POST or None,request.FILES,instance=movie)
     if form.is_valid():
