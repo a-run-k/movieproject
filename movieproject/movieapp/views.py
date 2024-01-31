@@ -34,7 +34,7 @@ def dele(request,id):
     return render(request,'del.html')
 
 
-def add(request,id):
+def add(request):
         if request.method == "POST":
 
             name=request.POST.get('name')
